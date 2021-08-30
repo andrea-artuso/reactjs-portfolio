@@ -9,7 +9,10 @@
     position: fixed;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--background-gray);
 }
 .app-header .loading-line {
     position: absolute;
@@ -20,7 +23,30 @@
     background-color: var(--default-orange);
     animation: loading-line-progress .8s;
 }
-.app-header > .menu-container > a{
+.app-header > img {
+    width: 152px;
+    height: auto;
+}
+
+.menu-button {
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+.menu-button > span {
+    width: 27px;
+    height: 3px;
+    border-radius: 6px;
+    display: block;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+.menu-button > span:last-of-type {
+    width: 20px;
+    margin-left: auto;
+}
+
+.app-header > .menu-container > a {
     margin: 0 14px;
 }
 .app-header > .menu-container > a:not(.button-secondary, .button-primary) {
@@ -28,6 +54,51 @@
 }
 .app-header > .menu-container > a:not(.button-secondary, .button-primary):hover {
     text-decoration: underline;
+}
+
+
+@media screen and (max-width: 890px) {
+    .app-header {
+        padding: 33px 70px 16px 70px;
+        display: inline-block;
+    }
+    .menu-button {
+        border: none;
+        background-color: transparent;
+        display: block;
+        float: right;
+    }
+    .app-header > .menu-container {
+        height: 0;
+        overflow: hidden;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        -webkit-transition: all .4s ease-out;
+        transition: all .4s ease-out;
+    }
+    .menu-open {
+        height: 200px !important;
+        overflow: scroll !important;
+    }
+    .app-header > .menu-container > a {
+        margin: 8px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .app-header {
+        padding: 14px 16px;
+    }
+}
+
+@media screen and (max-width: 220px) {
+    .app-header {
+        display: block;
+        text-align: center;
+    }
 }
 
 

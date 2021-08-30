@@ -1,0 +1,44 @@
+[
+    {
+        "name": "HTML5",
+        "type": "Frontend development",
+        "image": "https://netter.io/assets/images/company/technologies/html5.png",
+        "level": 100
+    },
+    {
+        "name": "CSS3",
+        "type": "Frontend development",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/240px-CSS3_logo.svg.png",
+        "level": 100
+    },
+    {
+        "name": "JavaScript",
+        "type": "Frontend development",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png",
+        "level": 90
+    },
+    {
+        "name": "ReactJS",
+        "type": "Frontend development",
+        "image": "https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+        "level": 50
+    },
+    {
+        "name": "Vue.js",
+        "type": "Frontend development",
+        "image": "http://assets.stickpng.com/thumbs/58482acecef1014c0b5e4a1e.png",
+        "level": 20
+    },
+    {
+        "name": "C",
+        "type": "Software development",
+        "image": "https://lh3.googleusercontent.com/proxy/ZqJ76BJgJRqVqYAIDGmrIHzdBrzzfSnl60LUY56WWa4XpkKaPQxHBbcWspd3T-7JCEfeBRiNwLIQQ8rVYAuVJlpyVsgiQzNAeqo2Zw",
+        "level": 50
+    },
+    {
+        "name": "Python",
+        "type": "Software development",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png",
+        "level": 20
+    }
+]

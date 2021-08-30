@@ -20,11 +20,13 @@
     background-color: var(--default-orange);
     animation: loading-line-progress .8s;
 }
-.app-header > .menu-container > a {
+.app-header > .menu-container > a{
     margin: 0 14px;
+}
+.app-header > .menu-container > a:not(.button-secondary, .button-primary) {
     color: #fff;
 }
-.app-header > .menu-container > a:not(.button-secondary):hover {
+.app-header > .menu-container > a:not(.button-secondary, .button-primary):hover {
     text-decoration: underline;
 }
 

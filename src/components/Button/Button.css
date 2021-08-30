@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button-primary {
+    padding: 12px 45px;
+    background-image: linear-gradient(45deg, var(--button1-left-color), var(--button1-right-color));
+    color: #000;
+    font-weight: 600;
+    border-radius: 9px;
+}
+
+.button-secondary {
+    padding: 9px 25px;
+    background-color: var(--button2-bg-color);
+    color: #fff;
+    border: 3px solid var(--button2-border-color);
+    font-weight: 600;
+    border-radius: 9px;
+}

@@ -81,7 +81,7 @@
     }
     .menu-open {
         height: 200px !important;
-        overflow: scroll !important;
+        overflow-y: scroll !important;
     }
     .app-header > .menu-container > a {
         margin: 8px 0;

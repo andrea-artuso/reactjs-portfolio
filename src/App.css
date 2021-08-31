@@ -40,6 +40,19 @@ a {
   font-weight: 600;
   opacity: 1;
 }
+.loading-wheel {
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: auto;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 3px solid white;
+  border-style: dashed;
+}
+.spinning-wheel {
+  animation: spin 3s linear infinite;
+}
 
 
 .hero-section {
@@ -73,6 +86,7 @@ a {
   display: block;
   width: 100%;
   padding: 150px 15%;
+  text-align: center;
 }
 
 
@@ -126,4 +140,11 @@ a {
     display: block;
     margin: auto;
   }
+}
+
+
+
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
 }

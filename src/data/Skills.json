@@ -40,5 +40,59 @@
         "type": "Software development",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png",
         "level": 20
+    },
+    {
+        "name": "Github",
+        "type": "Dev technologies",
+        "image": "https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg",
+        "level": 90
+    },
+    {
+        "name": "Git",
+        "type": "Dev technologies",
+        "image": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+        "level": 60
+    },
+    {
+        "name": "AWS",
+        "type": "Dev technologies",
+        "image": "https://res.cloudinary.com/wagon/image/upload/v1585091640/ntgefujscihnprq2a9bb.png",
+        "level": 50
+    },
+    {
+        "name": "VS Code",
+        "type": "Software",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png",
+        "level": 100
+    },
+    {
+        "name": "Atom",
+        "type": "Software",
+        "image": "https://brandslogos.com/wp-content/uploads/images/large/atom-logo.png",
+        "level": 80
+    },
+    {
+        "name": "Adobe XD",
+        "type": "Software",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/2101px-Adobe_XD_CC_icon.svg.png",
+        "level": 60
+    },
+    {
+        "name": "Office 365",
+        "type": "Software",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg/2048px-Microsoft_Office_logo_%282019%E2%80%93present%29.svg.png",
+        "level": 90
+    },
+    {
+        "name": "Windows 10",
+        "type": "Operating systems",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/2048px-Windows_logo_-_2012.svg.png",
+        "level": 100
+    },
+    {
+        "name": "Linux ubuntu",
+        "type": "Operating systems",
+        "image": "https://brandslogos.com/wp-content/uploads/images/large/ubuntu-logo.png",
+        "level": 60
     }
 ]

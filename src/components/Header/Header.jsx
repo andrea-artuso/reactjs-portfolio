@@ -11,7 +11,6 @@ import Button from '../Button/Button.jsx'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    console.log(isMenuOpen);
     return (
         <header className="app-header homepage-header">
             <div className="loading-line"></div>

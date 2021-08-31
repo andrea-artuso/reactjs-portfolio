@@ -2,6 +2,7 @@
 :root {
   --default-orange: #FF9100;
   --background-gray: #0F0F0F;
+  --icon-button-bg-color: rgba(255,255,255, .25);
   --button1-left-color: #FD8B05;
   --button1-right-color: #EC5CB4;
   --button2-bg-color: rgba(253, 139, 5, .4);
@@ -68,6 +69,13 @@ a {
 }
 
 
+.projects-container {
+  display: block;
+  width: 100%;
+  padding: 150px 15%;
+}
+
+
 @media screen and (max-width: 1380px) {
   .hero-section {
     margin: 0 100px;
@@ -106,9 +114,12 @@ a {
     max-width: 100%;
   }
 }
-@media screen and (max-width: 600px) {
-  
+@media screen and (max-width: 530px) {
+  .projects-container {
+    padding: 150px 46px;
+  }
 }
+
 @media screen and (max-width: 450px) {
   .profile-picture {
     width: 65%;

@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon-button {
+    width: 47px;
+    height: 47px;
+    background-color: var(--icon-button-bg-color);
+    border-radius: 9px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -5,6 +5,7 @@
 }
 
 .app-header {
+    z-index: 100;
     padding: 33px 113px 16px 113px;
     position: fixed;
     width: 100%;

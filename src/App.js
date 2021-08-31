@@ -39,10 +39,10 @@ function App() {
 
       {/* Projects' section */}
       <section id="projects">
-        {
+        <div className="projects-container">
+        { 
           homeProjects.filter(project => project.isFeatured===true).map(featuredProject => <FeaturedProject key={featuredProject.id} title={featuredProject.title} role={featuredProject.role} year={featuredProject.year} description={featuredProject.description} image={featuredProject.image} link={featuredProject.link} github_link={featuredProject.github_link} />)
         }
-        <div className="projects-container">
         </div>
 
         <Button type="primary" text="See all projects" href="/projects" />

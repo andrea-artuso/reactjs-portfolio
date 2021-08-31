@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 //Import ASSETS
 import ProfilePicture from './assets/ProfilePicture.webp'
-import PlaceholderImg from './assets/placeholder.png'
 
 //Import STYLES
 import './App.css';

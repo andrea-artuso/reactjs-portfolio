@@ -96,11 +96,23 @@
     .project-container {
         flex-direction: column;
     }
+    .project-container:nth-child(even) {
+        flex-direction: column;
+    }
     .project-image-wrapper {
         margin: 0;
         height: auto;
     }
     .project-featured_sticker {
+        position: absolute;
+        top: -8px;
+        left: -7px;
+        width: 65px;
+        height: 65px;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .project-container:nth-child(even) > .project-image-wrapper > .project-featured_sticker {
         position: absolute;
         top: -8px;
         left: -7px;
@@ -119,6 +131,12 @@
     }
     .project-info {
         margin: 14px 0 0 0;
+    }
+    .project-container:nth-child(even) > .project-info {
+        text-align: left;
+    }
+    .project-container:nth-child(even) > .project-info > p {
+        margin-left: unset;
     }
 }
 

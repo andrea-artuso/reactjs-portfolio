@@ -9,6 +9,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: row;
+    margin: 100px 0;
 }
 
 .project-featured_sticker {
@@ -55,6 +57,7 @@
 }
 
 .project-info {
+    text-align: left;
     width: 100%;
     margin-left: 60px;
     margin-bottom: 20px;
@@ -62,7 +65,7 @@
 }
 .project-info > p {
     font-size: 12px;
-    max-width: 90%;
+    max-width: 70%;
 }
 .project-info > a {
     vertical-align: middle;
@@ -71,6 +74,23 @@
 }
 
 
+/*-- ODD ELEMENTS --*/
+.project-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.project-container:nth-child(even) > .project-image-wrapper > .project-featured_sticker {
+    left: unset;
+    right: -30px;
+}
+.project-container:nth-child(even) > .project-info {
+    text-align: right;
+}
+.project-container:nth-child(even) > .project-info > p {
+    margin-left: auto;
+}
+.project-container:nth-child(even) > .project-info > .project-title {
+    margin-right: -200px;
+}
 
 @media screen and (max-width: 1026px) {
     .project-container {

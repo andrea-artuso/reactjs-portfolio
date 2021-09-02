@@ -82,10 +82,13 @@ a {
 }
 
 
+section#projects {
+  text-align: center;
+}
 .projects-container {
   display: block;
   width: 100%;
-  padding: 150px 15%;
+  padding: 150px 15% 50px 15%;
   text-align: center;
 }
 

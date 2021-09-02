@@ -13,15 +13,22 @@ import FeaturedProject from './components/FeaturedProject/FeaturedProject';
 
 
 function App() {
+  //Document useStates
   const [isDocumentLoaded, setIsDocumentLoaded] = useState(false);
   const [documentData, setDocumentData] = useState({});
   const [projects, setProjects] = useState([]);
+  const [featuredProjects, setFeaturedProjects] = useState([]);
 
+  //Document useEffects
   useEffect(() => {
     getDocumentData(setDocumentData);
     getProjectsData(setProjects);
     setTimeout(()=>setIsDocumentLoaded(true), 900);
   }, [])
+
+  useEffect(() => {
+    setFeaturedProjects(projects.filter(project => project.isFeatured===true))
+  }, [projects])
 
   return (
     <>
@@ -45,9 +52,13 @@ function App() {
       <section id="projects">
         <div className="projects-container">
         { 
-          isDocumentLoaded ? 
-          ((projects.filter(project => project.isFeatured===true)).length>0 ? projects.filter(project => project.isFeatured===true).map(featuredProject => <FeaturedProject key={featuredProject.id} title={featuredProject.title} role={featuredProject.role} year={featuredProject.year} description={featuredProject.description} image={featuredProject.image} link={featuredProject.link} github_link={featuredProject.github_link} />) : "No featured projects")
-          : <>
+          isDocumentLoaded ?          //Check if the document's elements are loaded
+          (featuredProjects.length>0 ?     //Check if the featured-projects are at least 1
+            featuredProjects.map(featuredProject =>    //TRUE: map featured projects
+              //Render FeaturedProject component for every projects
+              <FeaturedProject key={featuredProject.id} title={featuredProject.title} role={featuredProject.role} year={featuredProject.year} description={featuredProject.description} image={featuredProject.image} link={featuredProject.link} github_link={featuredProject.github_link} behance_link={featuredProject.behance_link} />
+            ) : "No featured projects")     //FALSE: the document is loaded but there aren't featured projects => Render an error text
+          : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
               <div className="loading-wheel spinning-wheel"></div>
               <div style={{marginTop: 10}}>Loading</div>
             </>

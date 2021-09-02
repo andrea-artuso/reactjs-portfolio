@@ -15,11 +15,11 @@ import FeaturedProject from './components/FeaturedProject/FeaturedProject';
 function App() {
   const [isDocumentLoaded, setIsDocumentLoaded] = useState(false);
   const [documentData, setDocumentData] = useState({});
-  const [homeProjects, setHomeProjects] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     getDocumentData(setDocumentData);
-    getProjectsData(setHomeProjects);
+    getProjectsData(setProjects);
     setTimeout(()=>setIsDocumentLoaded(true), 900);
   }, [])
 
@@ -46,7 +46,7 @@ function App() {
         <div className="projects-container">
         { 
           isDocumentLoaded ? 
-          homeProjects.filter(project => project.isFeatured===true).map(featuredProject => <FeaturedProject key={featuredProject.id} title={featuredProject.title} role={featuredProject.role} year={featuredProject.year} description={featuredProject.description} image={featuredProject.image} link={featuredProject.link} github_link={featuredProject.github_link} />)
+          ((projects.filter(project => project.isFeatured===true)).length>0 ? projects.filter(project => project.isFeatured===true).map(featuredProject => <FeaturedProject key={featuredProject.id} title={featuredProject.title} role={featuredProject.role} year={featuredProject.year} description={featuredProject.description} image={featuredProject.image} link={featuredProject.link} github_link={featuredProject.github_link} />) : "No featured projects")
           : <>
               <div className="loading-wheel spinning-wheel"></div>
               <div style={{marginTop: 10}}>Loading</div>

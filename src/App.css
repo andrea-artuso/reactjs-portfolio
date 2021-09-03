@@ -161,6 +161,12 @@ section#projects {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .resume-card_container {
+    margin: 45px 0;
+  }
+}
+
 
 
 @keyframes spin {

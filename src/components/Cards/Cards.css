@@ -44,3 +44,9 @@ a, p {
         font-size: 22px;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .card {
+        margin: 13px 0;
+    }
+}

@@ -12,7 +12,7 @@ import Button from './components/Button/Button';
 import FeaturedProject from './components/FeaturedProject/FeaturedProject';
 import SchoolCard from './components/Cards/SchoolCard/SchoolCard';
 import CertificationCard from './components/Cards/CertificationCard/CertificationCard';
-import SkillCard from './components/Cards/SkillCard/SkillCard';
+import SkillContainer from './components/SkillContainer/SkillContainer';
 
 
 function App() {
@@ -151,101 +151,12 @@ function App() {
         {/* SKILLS */}
         <div className="resume-main_container">
           <h1>Skills</h1>
-
-          <div className="resume-card_container">   {/* FRONTEND DEVELOPMENT */}
-            <p>Frontend development</p>
-            <div className="resume-wrap_container">
-            { 
-              isDocumentLoaded ?          //Check if the document's elements are loaded
-              skills.filter(skill => skill.type==="Frontend development").map(skill =>    //TRUE: map schools
-                  //Render SchoolCard component for every school
-                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
-                )     //FALSE: the document is loaded but there aren't schools => Render an error text
-              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
-                  <div>
-                    <div className="loading-wheel spinning-wheel"></div>
-                    <div style={{marginTop: 10}}>Loading</div>
-                  </div>
-                </>
-            }
-            </div>
-          </div>
-
-          <div className="resume-card_container">   {/* SOFTWARE DEVELOPMENT */}
-            <p>Software development</p>
-            <div className="resume-wrap_container">
-            { 
-              isDocumentLoaded ?          //Check if the document's elements are loaded
-              skills.filter(skill => skill.type==="Software development").map(skill =>    //TRUE: map schools
-                  //Render SchoolCard component for every school
-                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
-                )     //FALSE: the document is loaded but there aren't schools => Render an error text
-              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
-                  <div>
-                    <div className="loading-wheel spinning-wheel"></div>
-                    <div style={{marginTop: 10}}>Loading</div>
-                  </div>
-                </>
-            }
-            </div>
-          </div>
-
-          <div className="resume-card_container">   {/* DEV TECHNOLOGIES */}
-            <p>Dev technologies</p>
-            <div className="resume-wrap_container">
-            { 
-              isDocumentLoaded ?          //Check if the document's elements are loaded
-              skills.filter(skill => skill.type==="Dev technologies").map(skill =>    //TRUE: map schools
-                  //Render SchoolCard component for every school
-                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
-                )     //FALSE: the document is loaded but there aren't schools => Render an error text
-              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
-                  <div>
-                    <div className="loading-wheel spinning-wheel"></div>
-                    <div style={{marginTop: 10}}>Loading</div>
-                  </div>
-                </>
-            }
-            </div>
-          </div>
-
-          <div className="resume-card_container">   {/* SOFTWARE */}
-            <p>Software</p>
-            <div className="resume-wrap_container">
-            { 
-              isDocumentLoaded ?          //Check if the document's elements are loaded
-              skills.filter(skill => skill.type==="Software").map(skill =>    //TRUE: map schools
-                  //Render SchoolCard component for every school
-                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
-                )     //FALSE: the document is loaded but there aren't schools => Render an error text
-              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
-                  <div>
-                    <div className="loading-wheel spinning-wheel"></div>
-                    <div style={{marginTop: 10}}>Loading</div>
-                  </div>
-                </>
-            }
-            </div>
-          </div>
-
-          <div className="resume-card_container">   {/* OPERATING SYSTEMS */}
-            <p>Operating systems</p>
-            <div className="resume-wrap_container">
-            { 
-              isDocumentLoaded ?          //Check if the document's elements are loaded
-              skills.filter(skill => skill.type==="Operating systems").map(skill =>    //TRUE: map schools
-                  //Render SchoolCard component for every school
-                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
-                )     //FALSE: the document is loaded but there aren't schools => Render an error text
-              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
-                  <div>
-                    <div className="loading-wheel spinning-wheel"></div>
-                    <div style={{marginTop: 10}}>Loading</div>
-                  </div>
-                </>
-            }
-            </div>
-          </div>
+          
+          <SkillContainer category="Frontend development" skills={skills.filter(skill => skill.type==="Frontend development")} />
+          <SkillContainer category="Software development" skills={skills.filter(skill => skill.type==="Software development")} />
+          <SkillContainer category="Dev technologies" skills={skills.filter(skill => skill.type==="Dev technologies")} />
+          <SkillContainer category="Software" skills={skills.filter(skill => skill.type==="Software")} />
+          <SkillContainer category="Operating systems" skills={skills.filter(skill => skill.type==="Operating systems")} />
         </div>
 
       </section>

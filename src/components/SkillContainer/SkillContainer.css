@@ -1,0 +1,60 @@
+.resume-main_container {
+    margin: 80px 15%;
+}
+.resume-card_container {
+    margin: 45px 5%;
+}
+.resume-wrap_container {
+    margin-top: 13px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile-header > button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.arrow-icon {
+    background: none;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+.arrow-icon-reverse {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 890px) {
+    .resume-wrap_container {
+        margin-top: 0;
+    }
+    .mobile-header {
+        background-color: var(--dark-gray);
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .mobile-header > button {
+        display: unset;
+    }
+    
+    .mobile-cards-closed {
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .resume-card_container {
+      margin: 45px 0;
+    }
+  }

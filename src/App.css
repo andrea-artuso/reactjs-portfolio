@@ -95,20 +95,6 @@ section#projects {
 }
 
 
-.resume-main_container {
-  margin: 80px 15%;
-}
-.resume-card_container {
-  margin: 45px 5%;
-}
-.resume-wrap_container {
-  margin-top: 13px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-
 @media screen and (max-width: 1380px) {
   .hero-section {
     margin: 0 100px;
@@ -158,12 +144,6 @@ section#projects {
     width: 65%;
     display: block;
     margin: auto;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .resume-card_container {
-    margin: 45px 0;
   }
 }
 

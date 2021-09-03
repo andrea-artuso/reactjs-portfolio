@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+a, p {
+    font-size: 14px;
+}
+
+.school-card {
+    background-color: var(--dark-gray);
+    width: 367px;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 13px 15px;
+}
+
+.school-card > a {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: var(--light-gray);
+}
+.school-card > p {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.place-icon {
+    width: 12px;
+    height: 12px;
+    color: var(--light-gray);
+    margin-right: 5px;
+}

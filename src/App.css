@@ -2,6 +2,8 @@
 :root {
   --default-orange: #FF9100;
   --background-gray: #0F0F0F;
+  --dark-gray: #0A0A0A;
+  --light-gray: rgba(255,255,255,.6);
   --icon-button-bg-color: rgba(255,255,255, .25);
   --button1-left-color: #FD8B05;
   --button1-right-color: #EC5CB4;
@@ -90,6 +92,20 @@ section#projects {
   width: 100%;
   padding: 150px 15% 50px 15%;
   text-align: center;
+}
+
+
+.resume-main_container {
+  margin: 80px 15%;
+}
+.resume-card_container {
+  margin: 45px 5%;
+}
+.resume-wrap_container {
+  margin-top: 13px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 

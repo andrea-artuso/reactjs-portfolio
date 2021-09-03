@@ -12,6 +12,7 @@ import Button from './components/Button/Button';
 import FeaturedProject from './components/FeaturedProject/FeaturedProject';
 import SchoolCard from './components/Cards/SchoolCard/SchoolCard';
 import CertificationCard from './components/Cards/CertificationCard/CertificationCard';
+import SkillCard from './components/Cards/SkillCard/SkillCard';
 
 
 function App() {
@@ -22,13 +23,18 @@ function App() {
   const [featuredProjects, setFeaturedProjects] = useState([]);
   const [schools, setSchools] = useState([]);
   const [certifications, setCertifications] = useState([]);
+  const [works, setWorks] = useState([]);
+  const [skills, setSkills] = useState([]);
 
   //Document useEffects
   useEffect(() => {
     getDocumentData(setDocumentData);
     getProjectsData(setProjects);
     getSchoolsData(setSchools);
-    getCertificationsData(setCertifications)
+    getCertificationsData(setCertifications);
+    getWorksData(setWorks);
+    getSkillsData(setSkills);
+
     setTimeout(()=>setIsDocumentLoaded(true), 900);
   }, [])
 
@@ -120,6 +126,128 @@ function App() {
           </div>
         </div>
 
+        <div className="resume-main_container">
+          <h1>Work experience</h1>
+          <div className="resume-card_container">
+            <div className="resume-wrap_container">
+            { 
+              isDocumentLoaded ?          //Check if the document's elements are loaded
+              (works.length>0 ?     //Check if schools are at least 1
+                works.map(work =>    //TRUE: map schools
+                  //Render SchoolCard component for every school
+                  <h1>{work.name}</h1>
+                ) : "No work experience")     //FALSE: the document is loaded but there aren't schools => Render an error text
+              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
+                  <div>
+                    <div className="loading-wheel spinning-wheel"></div>
+                    <div style={{marginTop: 10}}>Loading</div>
+                  </div>
+                </>
+            }
+            </div>
+          </div>
+        </div>
+
+        {/* SKILLS */}
+        <div className="resume-main_container">
+          <h1>Skills</h1>
+
+          <div className="resume-card_container">   {/* FRONTEND DEVELOPMENT */}
+            <p>Frontend development</p>
+            <div className="resume-wrap_container">
+            { 
+              isDocumentLoaded ?          //Check if the document's elements are loaded
+              skills.filter(skill => skill.type==="Frontend development").map(skill =>    //TRUE: map schools
+                  //Render SchoolCard component for every school
+                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
+                )     //FALSE: the document is loaded but there aren't schools => Render an error text
+              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
+                  <div>
+                    <div className="loading-wheel spinning-wheel"></div>
+                    <div style={{marginTop: 10}}>Loading</div>
+                  </div>
+                </>
+            }
+            </div>
+          </div>
+
+          <div className="resume-card_container">   {/* SOFTWARE DEVELOPMENT */}
+            <p>Software development</p>
+            <div className="resume-wrap_container">
+            { 
+              isDocumentLoaded ?          //Check if the document's elements are loaded
+              skills.filter(skill => skill.type==="Software development").map(skill =>    //TRUE: map schools
+                  //Render SchoolCard component for every school
+                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
+                )     //FALSE: the document is loaded but there aren't schools => Render an error text
+              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
+                  <div>
+                    <div className="loading-wheel spinning-wheel"></div>
+                    <div style={{marginTop: 10}}>Loading</div>
+                  </div>
+                </>
+            }
+            </div>
+          </div>
+
+          <div className="resume-card_container">   {/* DEV TECHNOLOGIES */}
+            <p>Dev technologies</p>
+            <div className="resume-wrap_container">
+            { 
+              isDocumentLoaded ?          //Check if the document's elements are loaded
+              skills.filter(skill => skill.type==="Dev technologies").map(skill =>    //TRUE: map schools
+                  //Render SchoolCard component for every school
+                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
+                )     //FALSE: the document is loaded but there aren't schools => Render an error text
+              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
+                  <div>
+                    <div className="loading-wheel spinning-wheel"></div>
+                    <div style={{marginTop: 10}}>Loading</div>
+                  </div>
+                </>
+            }
+            </div>
+          </div>
+
+          <div className="resume-card_container">   {/* SOFTWARE */}
+            <p>Software</p>
+            <div className="resume-wrap_container">
+            { 
+              isDocumentLoaded ?          //Check if the document's elements are loaded
+              skills.filter(skill => skill.type==="Software").map(skill =>    //TRUE: map schools
+                  //Render SchoolCard component for every school
+                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
+                )     //FALSE: the document is loaded but there aren't schools => Render an error text
+              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
+                  <div>
+                    <div className="loading-wheel spinning-wheel"></div>
+                    <div style={{marginTop: 10}}>Loading</div>
+                  </div>
+                </>
+            }
+            </div>
+          </div>
+
+          <div className="resume-card_container">   {/* OPERATING SYSTEMS */}
+            <p>Operating systems</p>
+            <div className="resume-wrap_container">
+            { 
+              isDocumentLoaded ?          //Check if the document's elements are loaded
+              skills.filter(skill => skill.type==="Operating systems").map(skill =>    //TRUE: map schools
+                  //Render SchoolCard component for every school
+                  <SkillCard key={skill.id} name={skill.name} image={skill.image} level={skill.level} />
+                )     //FALSE: the document is loaded but there aren't schools => Render an error text
+              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
+                  <div>
+                    <div className="loading-wheel spinning-wheel"></div>
+                    <div style={{marginTop: 10}}>Loading</div>
+                  </div>
+                </>
+            }
+            </div>
+          </div>
+        </div>
+
       </section>
     </>
   );
@@ -147,6 +275,18 @@ function getCertificationsData(setCertifications){
   fetch('../data/Certifications.json')
     .then(response => response.json())
     .then(data => setCertifications(data))
+}
+
+function getWorksData(setWorks){
+  fetch('../data/Works.json')
+    .then(response => response.json())
+    .then(data => setWorks(data))
+}
+
+function getSkillsData(setSkills){
+  fetch('../data/Skills.json')
+    .then(response => response.json())
+    .then(data => setSkills(data))
 }
 
 export default App;

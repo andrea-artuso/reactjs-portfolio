@@ -10,7 +10,8 @@ import './App.css';
 import Header from './components/Header/Header';
 import Button from './components/Button/Button';
 import FeaturedProject from './components/FeaturedProject/FeaturedProject';
-import SchoolCard from './components/SchoolCard/SchoolCard';
+import SchoolCard from './components/Cards/SchoolCard/SchoolCard';
+import CertificationCard from './components/Cards/CertificationCard/CertificationCard';
 
 
 function App() {
@@ -20,12 +21,14 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [featuredProjects, setFeaturedProjects] = useState([]);
   const [schools, setSchools] = useState([]);
+  const [certifications, setCertifications] = useState([]);
 
   //Document useEffects
   useEffect(() => {
     getDocumentData(setDocumentData);
     getProjectsData(setProjects);
     getSchoolsData(setSchools);
+    getCertificationsData(setCertifications)
     setTimeout(()=>setIsDocumentLoaded(true), 900);
   }, [])
 
@@ -73,6 +76,7 @@ function App() {
 
       {/* Resume section */}
       <section id="resume">
+
         <div className="resume-main_container">
           <h1>Education</h1>
           <div className="resume-card_container">
@@ -80,9 +84,9 @@ function App() {
             <div className="resume-wrap_container">
             { 
               isDocumentLoaded ?          //Check if the document's elements are loaded
-              (schools.length>0 ?     //Check if the featured-projects are at least 1
-                schools.map(school =>    //TRUE: map featured projects
-                  //Render FeaturedProject component for every projects
+              (schools.length>0 ?     //Check if schools are at least 1
+                schools.map(school =>    //TRUE: map schools
+                  //Render SchoolCard component for every school
                   <SchoolCard key={school.id} name={school.name} place={school.place} place_link={school.place_link} start_year={school.start_year} final_year={school.end_year} grade={school.grade} max_grade={school.max_grade} />
                 ) : "No schools found")     //FALSE: the document is loaded but there aren't schools => Render an error text
               : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
@@ -94,7 +98,28 @@ function App() {
             }
             </div>
           </div>
+
+          <div className="resume-card_container">
+            <p>Certifications</p>
+            <div className="resume-wrap_container">
+            { 
+              isDocumentLoaded ?          //Check if the document's elements are loaded
+              (certifications.length>0 ?     //Check if the certifications are at least 1
+                certifications.map(certification =>    //TRUE: map certifications
+                  //Render CertificationCard component for every certification
+                  <CertificationCard key={certification.id} name={certification.name} year={certification.year} orgDisplayName={certification['org_display-name']} orgFullName={certification['org_fullName']} orgWebsite={certification['org_website']} />
+                ) : "No certifications found")     //FALSE: the document is loaded but there aren't certifications => Render an error text
+              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
+                  <div>
+                    <div className="loading-wheel spinning-wheel"></div>
+                    <div style={{marginTop: 10}}>Loading</div>
+                  </div>
+                </>
+            }
+            </div>
+          </div>
         </div>
+
       </section>
     </>
   );
@@ -116,6 +141,12 @@ function getSchoolsData(setSchools){
   fetch('../data/Schools.json')
     .then(response => response.json())
     .then(data => setSchools(data))
+}
+
+function getCertificationsData(setCertifications){
+  fetch('../data/Certifications.json')
+    .then(response => response.json())
+    .then(data => setCertifications(data))
 }
 
 export default App;

@@ -1,9 +1,9 @@
-import './SchoolCard.css'
+import '../Cards.css'
 import { LocationMarkerIcon } from '@heroicons/react/solid'
 
 const SchoolCard = ( {name, place, place_link, start_year, final_year, grade, max_grade} ) => {
     return (
-        <div className="school-card">
+        <div className="card">
             <h2>{name}</h2>
             <a href={place_link} target="_blank" alt={place} rel="noreferrer">
                 <LocationMarkerIcon className="place-icon" />

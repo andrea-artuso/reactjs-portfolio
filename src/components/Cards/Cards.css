@@ -11,7 +11,7 @@ a, p {
     font-size: 14px;
 }
 
-.school-card {
+.card {
     background-color: var(--dark-gray);
     width: 367px;
     height: fit-content;
@@ -20,13 +20,13 @@ a, p {
     margin: 13px 15px;
 }
 
-.school-card > a {
+.card > a {
     display: block;
     margin-bottom: 20px;
     font-weight: 500;
     color: var(--light-gray);
 }
-.school-card > p {
+.card > p {
     display: inline-block;
     margin-right: 5px;
 }
@@ -36,4 +36,11 @@ a, p {
     height: 12px;
     color: var(--light-gray);
     margin-right: 5px;
+}
+
+
+@media screen and (max-width: 890px) {
+    h2 {
+        font-size: 22px;
+    }
 }

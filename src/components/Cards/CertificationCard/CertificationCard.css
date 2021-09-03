@@ -1,0 +1,10 @@
+.little-card > a {
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+.card > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

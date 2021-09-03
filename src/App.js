@@ -85,7 +85,7 @@ function App() {
 
         <div className="resume-main_container">
           <h1>Education</h1>
-          <div className="resume-card_container">
+          <div className="resume-card_container">   {/* SCHOOL EXPERIENCE */}
             <p>School</p>
             <div className="resume-wrap_container">
             { 
@@ -105,7 +105,7 @@ function App() {
             </div>
           </div>
 
-          <div className="resume-card_container">
+          <div className="resume-card_container">   {/* CERTIFICATIONS EXPERIENCE */}
             <p>Certifications</p>
             <div className="resume-wrap_container">
             { 
@@ -128,7 +128,7 @@ function App() {
 
         <div className="resume-main_container">
           <h1>Work experience</h1>
-          <div className="resume-card_container">
+          <div className="resume-card_container">   {/* WORK EXPERIENCE */}
             <div className="resume-wrap_container">
             { 
               isDocumentLoaded ?          //Check if the document's elements are loaded

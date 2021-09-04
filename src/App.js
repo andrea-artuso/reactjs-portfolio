@@ -39,7 +39,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    setFeaturedProjects(projects.filter(project => project.isFeatured===true))
+    setFeaturedProjects(projects.filter(project => project.isFeatured))
   }, [projects])
 
   return (

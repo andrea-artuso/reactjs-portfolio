@@ -21,7 +21,9 @@ const FeaturedProject = ( {title, role, year, description, image, link, github_l
 
                 <p>{description}</p>
 
-                <Button type="secondary" text="Visit website" href={link} target="_blank" />
+                {link!=="" &&
+                    <Button type="secondary" text="Visit website" href={link} target="_blank" />
+                }
                 {github_link!=="" && 
                     <IconButton iconPath={github} href={github_link} target="_blank" /> 
                 }

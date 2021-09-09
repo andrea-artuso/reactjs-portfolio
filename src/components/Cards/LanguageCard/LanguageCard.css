@@ -1,0 +1,9 @@
+.language-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.language-card > div {
+    width: 85%;
+    margin-left: 20px;
+}

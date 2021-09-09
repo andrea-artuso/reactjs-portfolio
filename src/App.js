@@ -13,6 +13,7 @@ import FeaturedProject from './components/FeaturedProject/FeaturedProject';
 import SchoolCard from './components/Cards/SchoolCard/SchoolCard';
 import CertificationCard from './components/Cards/CertificationCard/CertificationCard';
 import SkillContainer from './components/SkillContainer/SkillContainer';
+import LanguageCard from './components/Cards/LanguageCard/LanguageCard';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   const [featuredProjects, setFeaturedProjects] = useState([]);
   const [schools, setSchools] = useState([]);
   const [certifications, setCertifications] = useState([]);
+  const [languages, setLanguages] = useState([]);
   const [works, setWorks] = useState([]);
   const [skills, setSkills] = useState([]);
 
@@ -32,6 +34,7 @@ function App() {
     getProjectsData(setProjects);
     getSchoolsData(setSchools);
     getCertificationsData(setCertifications);
+    getLanguagesData(setLanguages);
     getWorksData(setWorks);
     getSkillsData(setSkills);
 
@@ -124,6 +127,26 @@ function App() {
             }
             </div>
           </div>
+
+          <div className="resume-card_container">   {/* CERTIFICATIONS EXPERIENCE */}
+            <p>Languages</p>
+            <div className="resume-wrap_container">
+            { 
+              isDocumentLoaded ?          //Check if the document's elements are loaded
+              (languages.length>0 ?     //Check if the certifications are at least 1
+                languages.map(language =>    //TRUE: map certifications
+                  //Render CertificationCard component for every certification
+                  <LanguageCard key={language.id} name={language.name} level={language.level} code={language.countryCode} />
+                ) : "No languages found")     //FALSE: the document is loaded but there aren't certifications => Render an error text
+              : <>   {/*FALSE: the document isn't loaded yet => Render a loading wheel with text below */}
+                  <div>
+                    <div className="loading-wheel spinning-wheel"></div>
+                    <div style={{marginTop: 10}}>Loading</div>
+                  </div>
+                </>
+            }
+            </div>
+          </div>
         </div>
 
         <div className="resume-main_container">
@@ -193,6 +216,12 @@ function getCertificationsData(setCertifications){
   fetch('../data/Certifications.json')
     .then(response => response.json())
     .then(data => setCertifications(data))
+}
+
+function getLanguagesData(setLanguages){
+  fetch('../data/Languages.json')
+    .then(response => response.json())
+    .then(data => setLanguages(data))
 }
 
 function getWorksData(setWorks){

@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 //Import ASSETS
 import ProfilePicture from './assets/ProfilePicture.webp'
+import github from './assets/Icons/github.webp'
+import behance from './assets/Icons/behance.webp'
+import linkedin from './assets/Icons/linkedin.webp'
 
 //Import STYLES
 import './App.css';
@@ -14,6 +17,8 @@ import SchoolCard from './components/Cards/SchoolCard/SchoolCard';
 import CertificationCard from './components/Cards/CertificationCard/CertificationCard';
 import SkillContainer from './components/SkillContainer/SkillContainer';
 import LanguageCard from './components/Cards/LanguageCard/LanguageCard';
+import SocialLink from './components/SocialLink/SocialLink';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -27,6 +32,8 @@ function App() {
   const [languages, setLanguages] = useState([]);
   const [works, setWorks] = useState([]);
   const [skills, setSkills] = useState([]);
+
+  const [isEmailCopied, setIsEmailCopied] = useState(false);
 
   //Document useEffects
   useEffect(() => {
@@ -190,8 +197,49 @@ function App() {
         </div>
 
       </section>
+
+      <br />
+      <section id="contact">
+        <div className="resume-main_container">
+          <h1>Contact me</h1>
+          <div className="el_center-container">
+
+              <div className="contact-card">
+                <p>Send me an E-mail</p>
+
+                <div className="email-wrapper">
+                  <div className="email-container" >andrea.artuso.business@gmail.com</div>
+
+                  <Button type="primary" text={`${isEmailCopied ? "✔ Email copied!" : "Copy the email"}`} onClick={() => copyEmail(setIsEmailCopied)} />
+                </div>
+
+                <div className="social-card">
+                  <p>Social networks</p>
+
+                  <nav>
+                    <SocialLink iconPath={github} href='https://github.com/andrea-artuso' userName='andrea-artuso' />
+                    <SocialLink iconPath={behance} href='https://www.behance.net/andreaartuso' userName='Andrea Artuso' />
+                    <SocialLink iconPath={linkedin} href='https://www.linkedin.com/in/andrea-artuso/' userName='andrea-artuso' />
+                  </nav>
+                </div>
+              </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
+}
+
+function copyEmail(setIsEmailCopied, isEmailCopied){
+  navigator.clipboard.writeText("andrea.artuso.business@gmail.com");
+  setIsEmailCopied(!isEmailCopied);
+  setTimeout(()=>{
+    setIsEmailCopied(false);
+  }, 1200)
 }
 
 function getDocumentData(setData){

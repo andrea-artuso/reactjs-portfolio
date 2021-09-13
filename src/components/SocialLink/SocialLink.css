@@ -1,0 +1,13 @@
+.link-button > * {
+    vertical-align: middle;
+    color: #fff;
+    text-decoration: none;
+}
+.link-button > img {
+    width: 24px;
+    margin-right: 10px;
+}
+.link-button > span {
+    font-size: 15px;
+    font-weight: 600;
+} 

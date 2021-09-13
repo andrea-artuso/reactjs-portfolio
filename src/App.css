@@ -95,6 +95,50 @@ section#projects {
 }
 
 
+.el_center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-card {
+  width: 740px;
+  height: fit-content;
+  background-color: var(--dark-gray);
+  margin-top: 47px;
+  padding: 45px 55px 35px 55px;
+  border-radius: 28px;
+}
+.email-wrapper {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email-container {
+  width: 65%;
+  background-color: rgba(0,0,0, .40);
+  padding: 8px 20px;
+  border: 2px solid #707070;
+  border-radius: 7px;
+}
+
+.social-card {
+  margin-top: 50px;
+  padding: 15px 25px 50px 25px;
+  background-color: #1C1C1C;
+  border-radius: 16px;
+}
+.social-card > nav {
+  margin-top: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 @media screen and (max-width: 1380px) {
   .hero-section {
     margin: 0 100px;
@@ -113,9 +157,18 @@ section#projects {
   .hero-content {
     max-width: 60%;
     padding-left: 30px;
-  }
+  }  
 }
 
+@media screen and (max-width: 976px) {
+  .email-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .email-wrapper > a {
+    margin-top: 15px;
+  }
+}
 
 @media screen and (max-width: 890px) {
   .hero-section {
@@ -132,10 +185,46 @@ section#projects {
   .hero-content {
     max-width: 100%;
   }
+
+  .email-container {
+    width: 100%;
+  }
+
+  .social-card > nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .social-card > nav > a {
+    margin: 9px 0;
+  }
 }
+
+@media screen and (max-width: 660px) {
+  .contact-card {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--dark-gray);
+    margin-top: 47px;
+    padding: 40px 20px 20px 20px;
+    border-radius: 28px;
+  }
+
+  .social-card {
+    padding: 15px 20px 35px 20px;
+  }
+}
+
 @media screen and (max-width: 530px) {
   .projects-container {
     padding: 150px 46px;
+  }
+
+  .email-container {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  .email-wrapper > a {
+    padding: 12px 25px;
   }
 }
 
@@ -144,6 +233,12 @@ section#projects {
     width: 65%;
     display: block;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .email-container {
+    overflow-x: auto;
   }
 }
 

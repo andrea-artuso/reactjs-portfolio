@@ -5,6 +5,7 @@ import './Projects.css'
 
 //Import ICONS
 import { SearchIcon, XIcon  } from '@heroicons/react/outline'
+import { HomeIcon } from '@heroicons/react/solid'
 
 const Header = () => {
     const [searchFilter, setSearchFilter] = useState('');
@@ -22,7 +23,10 @@ const Header = () => {
     return (
         <>
             <header className="app-header projects-header">
-                <a href="/" >Return to homepage</a>
+                <a href="/" >
+                    <HomeIcon className="link-icon" />
+                    <span>Return to homepage</span>
+                </a>
 
                 <div>
                     <input

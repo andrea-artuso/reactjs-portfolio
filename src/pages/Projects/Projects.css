@@ -7,6 +7,20 @@
     background-color: var(--dark-gray);
 }
 
+.projects-header > a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.projects-header > a:hover {
+    text-decoration: underline;
+}
+.link-icon {
+    width: 22px;
+    height: auto;
+    margin-right: 6px;
+}
+
 .projects-header > div {
     justify-self: center !important;
     padding: 12px 20px;

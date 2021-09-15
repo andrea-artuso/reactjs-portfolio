@@ -1,0 +1,47 @@
+.projects-header {
+    padding: 23px 113px;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    background-color: var(--dark-gray);
+}
+
+.projects-header > div {
+    justify-self: center !important;
+    padding: 12px 20px;
+    width: 45%;
+    border-radius: 30px;
+    font-family: 'Poppins';
+    border: 2px solid #707070;
+    display: flex;
+    justify-content: space-between;
+}
+.projects-header > div > input {
+    background-color: transparent;
+    font-family: 'Poppins';
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #B8B8B8;
+    width: 100%;
+}
+
+.active-button {
+    background-image: linear-gradient(45deg, var(--button1-left-color), var(--button1-right-color));
+    border-radius: 50%;
+    color: #000 !important;
+}
+.projects-header > div > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 3px;
+    color: #707070;
+}
+.search-icon {
+    width: 21px;
+    height: 21px;
+}

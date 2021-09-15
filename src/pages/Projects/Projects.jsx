@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react'
 //Import STYLES
 import './Projects.css'
 
+//Import ICONS
+import { SearchIcon, XIcon  } from '@heroicons/react/outline'
+
 const Header = () => {
     const [searchFilter, setSearchFilter] = useState('');
     const [projects, setProjects] = useState([]);
@@ -18,15 +21,25 @@ const Header = () => {
 
     return (
         <>
-            <header className="">
+            <header className="app-header projects-header">
                 <a href="/" >Return to homepage</a>
 
-                <input
-                    type="text"
-                    value={searchFilter}
-                    onChange={(e) => setSearchFilter(e.target.value)}
-                    placeholder="Search for projects"
-                />
+                <div>
+                    <input
+                        type="text"
+                        value={searchFilter}
+                        onChange={(e) => setSearchFilter(e.target.value)}
+                        placeholder="Search for projects"
+                    />
+
+                    <button className={searchFilter!=="" ? "active-button" : ""} onClick={()=> setSearchFilter('')}>
+                        {
+                            searchFilter!=="" ?
+                            <XIcon className="search-icon" /> :
+                            <SearchIcon className="search-icon" />
+                        }
+                    </button>
+                </div>
             </header>
             <div>
                 {

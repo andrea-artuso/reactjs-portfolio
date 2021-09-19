@@ -7,6 +7,9 @@ import './Projects.css'
 import { SearchIcon, XIcon  } from '@heroicons/react/outline'
 import { HomeIcon } from '@heroicons/react/solid'
 
+//Import COMPONENTS
+import ProjectCard from '../../components/ProjectCard/ProjectCard'
+
 const Header = () => {
     const [searchFilter, setSearchFilter] = useState('');
     const [projects, setProjects] = useState([]);
@@ -45,9 +48,18 @@ const Header = () => {
                     </button>
                 </div>
             </header>
-            <div>
+            <div className="error-container">
                 {
-                    filteredProjects.map(project => <h1 key={project.id} >{project.title}</h1>)
+                    filteredProjects.length === 0 ?
+                    <span>There aren't projects that match the filter.</span>
+                    : ""
+                }
+            </div>
+            <div className="project-page_container">
+                {
+                    filteredProjects.map(project => 
+                        <ProjectCard key={project.id} title={project.title} role={project.role} year={project.year} image={project.image} link={project.link} github_link={project.github_link} behance_link={project.behance_link} />
+                    )
                 }
             </div>
         </>

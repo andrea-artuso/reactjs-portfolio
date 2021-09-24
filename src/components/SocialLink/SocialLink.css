@@ -10,4 +10,8 @@
 .link-button > span {
     font-size: 15px;
     font-weight: 600;
-} 
+}
+
+.link-button:hover > span {
+    color: var(--default-orange);
+}

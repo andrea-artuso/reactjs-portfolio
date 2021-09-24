@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "name": "ITT G.Fauser",
+        "place": "Novara, Italy",
+        "place_link": "https://www.google.it/maps/place/Istituto+Tecnico+Industriale+G.+Fauser/@45.433993,8.6058247,17z/data=!4m5!3m4!1s0x47865a05a6a97dd9:0xf2a7d707364ec15d!8m2!3d45.4339703!4d8.6080738",
+        "start_year": "2019",
+        "end_year": "2024",
+        "grade": "",
+        "max_grade": "100"
+    },
+    {
+        "id": 1,
+        "name": "I.C Tanzio da Varallo",
+        "place": "Varallo, Italy",
+        "place_link": "https://www.google.it/maps/place/Scuola+Media+Statale+Tanzio+Da+Varallo/@45.8196143,8.2467818,17z/data=!3m1!4b1!4m5!3m4!1s0x478605ea13c56267:0x56633c4366268f71!8m2!3d45.8196106!4d8.2489705",
+        "start_year": "2016",
+        "end_year": "2019",
+        "grade": "9",
+        "max_grade": "10"
+    }
+]

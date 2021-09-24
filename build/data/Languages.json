@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "name": "Italian",
+        "level": "Native language",
+        "countryCode": "IT"
+    },
+    {
+        "id": 1,
+        "name": "English",
+        "level": "Work level",
+        "countryCode": "GB"
+    },
+    {
+        "id": 2,
+        "name": "French",
+        "level": "Basic informal knowledge",
+        "countryCode": "FR"
+    }
+]

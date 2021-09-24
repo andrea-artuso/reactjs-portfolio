@@ -1,0 +1,14 @@
+[
+    {
+        "id": 0,
+        "title": "Ero Forestiero",
+        "role": "Frontend Developer",
+        "year": "2021",
+        "description": "Ero Forestiero è un’associazione senza scopo di lucro, apartitica e apolitica che svolge attività formative a favore dell’integrazione sociale delle persone di origine non italiana presenti sul territorio di Vigevano, ponendo particolare attenzione alla tutela della loro identità culturale e religiosa.",
+        "image": "./images/ero-forestiero.webp",
+        "link": "https://www.eroforestiero.org/",
+        "github_link": "https://github.com/Coding-Bunker/Ero-Forestiero",
+        "behance_link": "",
+        "isFeatured": true
+    }
+]

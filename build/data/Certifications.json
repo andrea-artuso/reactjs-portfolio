@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "name": "ICDL Basic",
+        "year": "2021",
+        "org_display-name": "AICA",
+        "org_fullName": "Associazione Italiana per l'Informatica e il Calcolo Automatico",
+        "org_website": "https://www.aicanet.it/"
+    },
+    {
+        "id": 1,
+        "name": "KET",
+        "year": "2019",
+        "org_display-name": "Cambridge Assessment",
+        "org_fullName": "Cambridge Assessment",
+        "org_website": "https://www.cambridgeassessment.org.uk/"
+    }
+]

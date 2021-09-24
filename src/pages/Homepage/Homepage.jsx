@@ -10,6 +10,7 @@ import linkedin from '../../assets/Icons/linkedin.webp'
 import './Homepage.css';
 
 //Import COMPONENTS
+import TextPlaceholder from '../../components/TextPlaceholder/TextPlaceholder';
 import Header from '../../components/Header/Header';
 import Button from '../../components/Button/Button';
 import FeaturedProject from '../../components/FeaturedProject/FeaturedProject';
@@ -56,14 +57,14 @@ function App() {
       <Header />
       {/* Landing section */}
       <section className="hero-section">
-        <img src={ProfilePicture} alt="Andrea Artuso's profile avatar" className={isDocumentLoaded ? "profile-picture" : ""}></img>
+        <img src={ProfilePicture} alt="Andrea Artuso's profile avatar" className={isDocumentLoaded ? "profile-picture" : "image-width-placeholder"}></img>
 
         <div className="hero-content">
           <h1 className="hero-title">Hello, I'm <span className="highlight-text">Andrea Artuso</span><br/> and I'm a frontend developer<br/> based in Italy.</h1>
 
-          <p className="hero-description-title title-p">{!isDocumentLoaded ? "Loading..." : documentData['homepage_description-title']}</p>
+          {!isDocumentLoaded ? <TextPlaceholder rows={1} width={180} height={20} margin={15} spaceAbove={90} widthOffset={0} /> : <p className="hero-description-title title-p">{documentData['homepage_description-title']}</p> }
 
-          <p>{!isDocumentLoaded ? "Loading content..." : documentData['homepage_description-text']}</p>
+          {!isDocumentLoaded ? <TextPlaceholder rows={5} width={760} height={20} margin={3} widthOffset={90} /> : <p>{documentData['homepage_description-text']}</p> }
 
           <Button type="primary" text={!isDocumentLoaded ? "Loading..." : documentData['homepage_CTA-button-text']} href={documentData['homepage_CTA-button-href']} />
         </div>

@@ -68,6 +68,9 @@ a {
   border: 5px solid var(--default-orange);
   border-radius: 50%; 
 }
+.image-width-placeholder {
+  height: 100%;
+}
 
 .hero-content {
   max-width: 45%;
@@ -151,7 +154,7 @@ section#projects {
   .hero-section {
     margin: 0 50px;
   }
-  .profile-picture {
+  .profile-picture, .image-width-placeholder {
     width: 45%;
   }
   .hero-content {
@@ -176,7 +179,7 @@ section#projects {
     flex-direction: column;
     margin: 0 27px;
   }
-  .profile-picture {
+  .profile-picture, .image-width-placeholder {
     width: 50%;
     display: block;
     margin: auto;
@@ -216,7 +219,7 @@ section#projects {
 
 @media screen and (max-width: 530px) {
   .projects-container {
-    padding: 150px 46px;
+    padding: 150px 46px 30px 46px;
   }
 
   .email-container {
@@ -229,7 +232,7 @@ section#projects {
 }
 
 @media screen and (max-width: 450px) {
-  .profile-picture {
+  .profile-picture, .image-width-placeholder {
     width: 65%;
     display: block;
     margin: auto;

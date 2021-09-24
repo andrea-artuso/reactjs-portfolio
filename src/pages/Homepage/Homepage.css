@@ -118,6 +118,9 @@ section#projects {
   justify-content: space-between;
   align-items: center;
 }
+.email-wrapper > a {
+  cursor: pointer;
+}
 
 .email-container {
   width: 65%;

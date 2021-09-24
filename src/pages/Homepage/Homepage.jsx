@@ -87,7 +87,7 @@ function App() {
         }
         </div>
 
-        {/*<Button type="primary" text="See all projects" href="/projects" />*/}
+        <Button type="primary" text="See all projects" href="/projects" />
       </section>
 
       {/* Resume section */}

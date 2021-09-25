@@ -134,6 +134,12 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    body {
+        padding: 0;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .projects-header {
         padding: 18px 27px;

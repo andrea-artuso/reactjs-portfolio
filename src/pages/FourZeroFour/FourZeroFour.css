@@ -1,0 +1,46 @@
+html {
+    scroll-behavior: smooth;
+}
+.error-div {
+    text-align: center;
+}
+
+.content-title {
+    font-size: 164px;
+    font-weight: 300;
+    margin-top: 200px;
+    color: #ff9100;
+}
+.page-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 100px;
+}
+.page-caption {
+    font-size: 20px;
+    font-weight: 400;
+}
+.page-caption > a {
+    color: #ff9100;
+    font-size: 20px !important;
+}
+.page-caption > a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 767px) {
+    body {
+        padding: 0 30px;
+    }
+    .content-title {
+        font-size: 110px;
+        margin-top: 80px;
+    }
+    .page-title {
+        font-size: 35px;
+    }
+    .page-caption {
+        font-size: 18px;
+    }
+}

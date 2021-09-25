@@ -30,9 +30,6 @@ html {
 
 
 @media screen and (max-width: 767px) {
-    body {
-        padding: 0 30px;
-    }
     .content-title {
         font-size: 110px;
         margin-top: 80px;

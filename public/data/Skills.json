@@ -3,7 +3,7 @@
         "id": 0,
         "name": "HTML5",
         "type": "Frontend development",
-        "image": "https://netter.io/assets/images/company/technologies/html5.png",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
         "level": 100
     },
     {
@@ -71,41 +71,48 @@
     },
     {
         "id": 10,
+        "name": "Netlify",
+        "type": "Dev technologies",
+        "image": "https://seeklogo.com/images/N/netlify-logo-758722CDF4-seeklogo.com.png",
+        "level": 30
+    },
+    {
+        "id": 11,
         "name": "VS Code",
         "type": "Software",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png",
         "level": 100
     },
     {
-        "id": 11,
+        "id": 12,
         "name": "Atom",
         "type": "Software",
         "image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Atom_1.0_icon.png",
         "level": 80
     },
     {
-        "id": 12,
+        "id": 13,
         "name": "Adobe XD",
         "type": "Software",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/2101px-Adobe_XD_CC_icon.svg.png",
         "level": 60
     },
     {
-        "id": 13,
+        "id": 14,
         "name": "Office 365",
         "type": "Software",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg/2048px-Microsoft_Office_logo_%282019%E2%80%93present%29.svg.png",
         "level": 90
     },
     {
-        "id": 14,
+        "id": 15,
         "name": "Windows 10",
         "type": "Operating systems",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/2048px-Windows_logo_-_2012.svg.png",
         "level": 100
     },
     {
-        "id": 15,
+        "id": 16,
         "name": "Linux ubuntu",
         "type": "Operating systems",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo-ubuntu_cof-white_orange-hex.svg/285px-Logo-ubuntu_cof-white_orange-hex.svg.png",

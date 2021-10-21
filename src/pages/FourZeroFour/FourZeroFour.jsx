@@ -8,7 +8,7 @@ const FourZeroFour = () => {
             <h2 className="page-title">Page not found</h2>
             <h3 className="page-caption">
                 The page you are looking for doesn't exit or has been moved. <br/>
-                Check the url or <a href="./">return to homepage</a>.
+                Check the url or <a href="https://andrea-artuso.dev">return to homepage</a>.
             </h3>
         </div>
     )

@@ -186,6 +186,7 @@ function App() {
             skills.length>0 ?
             <>
               <SkillContainer category="Frontend development" skills={skills.filter(skill => skill.type==="Frontend development")} />
+              <SkillContainer category="Backend development" skills={skills.filter(skill => skill.type==="Backend development")} />
               <SkillContainer category="Software development" skills={skills.filter(skill => skill.type==="Software development")} />
               <SkillContainer category="Dev technologies" skills={skills.filter(skill => skill.type==="Dev technologies")} />
               <SkillContainer category="Software" skills={skills.filter(skill => skill.type==="Software")} />

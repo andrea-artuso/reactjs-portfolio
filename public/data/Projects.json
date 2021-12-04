@@ -10,5 +10,17 @@
         "github_link": "https://github.com/Coding-Bunker/Ero-Forestiero",
         "behance_link": "",
         "isFeatured": true
+    },
+    {
+        "id": 1,
+        "title": "Personal Agenda",
+        "role": "Fullstack Developer",
+        "year": "2021",
+        "description": "I've created this Agenda using PHP and MySQL DB to write all of my notes about school and work",
+        "image": "./images/php-agenda.PNG",
+        "link": "",
+        "github_link": "",
+        "behance_link": "",
+        "isFeatured": true
     }
 ]

@@ -35,6 +35,13 @@
         "level": 20
     },
     {
+        "id": 17,
+        "name": "PHP",
+        "type": "Backend development",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png",
+        "level": 30
+    },
+    {
         "id": 5,
         "name": "C",
         "type": "Software development",
